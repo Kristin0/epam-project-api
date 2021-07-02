@@ -7,7 +7,7 @@ resource "time_sleep" "wait_30_sec" {
 resource "null_resource" "install_env" {
 
   provisioner "local-exec" {
-    command = "( sleep 10; #ansible-playbook main.yml --vault-password-file pass.txt --private-key A4L.pem )"
+    command = "( sleep 10; )"
   }
 
   depends_on = [time_sleep.wait_30_sec]

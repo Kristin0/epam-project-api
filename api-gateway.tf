@@ -60,6 +60,6 @@ resource "local_file" "application" {
      host_ip = aws_instance.web-api.public_ip 
  }
  )
- filename = "/home/Kris/Desktop/Books/coding/Linux/materials/devops/test/api-gateway/application.yml"
+ filename = "application.yml"
  
 }

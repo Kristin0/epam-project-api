@@ -52,8 +52,12 @@ resource "aws_instance" "web-api" {
     Name = "web-api"
   }
   key_name = "A4L"
+  
 }
-
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = aws_instance.web-api.id
+  allocation_id =  "eipalloc-0bf055fbfac1b4d1f"
+}
 resource "local_file" "application" {
  content = templatefile("application.tmpl",
  {

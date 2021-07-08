@@ -39,7 +39,7 @@ spring:
       host: 54.166.163.2
       port: 8500
       discovery:
-        hostName: ${host_ip} # IP address or dns name
+        hostName: 52.1.74.125 # IP address or dns name
         instanceId: $${spring.application.name}:$${spring.application.instance_id:$${random.value}}
         healthCheckPath: /actuator/health
         healthCheckInterval: 15s
